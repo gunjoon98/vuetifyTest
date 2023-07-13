@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <meta charset="UTF-8" />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.ssafy.com/swp/rps/images/common/favicon.ico"
+    />
+    <title>SSAFY 10기 건준</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <v-app>
+        <div>
+
+          <v-container class="grey lighten-3 mb-6">
+            <v-row :align="align_test" style="height: 300px;">
+              <v-col cols="6" class="d-flex justify-center align-center" style="border: 1px solid green;"><div style="border: 1px solid blue;">A</div></v-col>
+              <v-col cols="6" class="d-flex justify-center align-center" style="border: 1px solid green;"><div style="border: 1px solid blue;">A</div></v-col>
+            </v-row>
+          </v-container>
+
+          <v-container class="grey lighten-3 mb-6">
+            <v-row :align="align_test" style="height: 300px">
+              <v-col v-for="n in 3" :key="n" :cols="cols_test" align-self="center" style="border: 1px solid red;">
+                <v-row :align="align_test">
+                  <v-col cols="3" class="d-flex justify-center align-center" style="border: 1px solid green;"><div style="border: 1px solid blue">AA</div></v-col>
+                  <v-col cols="3" class="d-flex justify-center align-center" style="border: 1px solid green;"><div style="border: 1px solid blue">AA</div></v-col>
+                  <v-col cols="3" class="d-flex justify-center align-center" style="border: 1px solid green;"><div style="border: 1px solid blue">AA</div></v-col>
+                </v-row>
+              </v-col>
+            </v-row>
+          </v-container>
+        </div>
+      </v-app>
+    </div>
+  </body>
+</html>
+
+<style>
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script>
+  new Vue({
+    el: "#app",
+    vuetify: new Vuetify(),
+    data: () => ({
+      alignments: [
+        'start',
+        'center',
+        'end',
+      ],
+      align_test: 'center',
+      cols_test: 4,
+    }),
+  });
+</script>
