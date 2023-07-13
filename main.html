@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <meta charset="UTF-8" />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.ssafy.com/swp/rps/images/common/favicon.ico"
+    />
+    <title>SSAFY 10기 건준</title>
+  </head>
+  <body>
+    <div id="app">
+      <v-app>
+        <v-main class="grey lighten-5 align-center">
+          <v-container class="mb-12">
+            <v-row justify="center">
+              <v-spacer></v-spacer>
+              <v-col cols="4" class="d-flex justify-center align-center">
+                <img src="1642680099542.jpg"
+                  style="
+                    height: 400px;
+                    width: 400px;
+                    display: block;
+                  "
+                  class="rounded-circle"
+                />
+              </v-col>
+              <v-col cols="4" class="d-flex justify-left align-center">
+                <div>
+                  <a class="text-h6 light-blue--text font-weight-medium"
+                    ><v-icon large>mdi-note</v-icon> : blog</a
+                  >
+                  <br />
+                  <a class="text-h6 light-blue--text font-weight-medium"
+                    ><v-icon large>mdi-github</v-icon> : github</a
+                  >
+                </div>
+              </v-col>
+            </v-row>
+          </v-container>
+
+          <v-container>
+            <v-row justify="center">
+              <v-col cols="12" class="mb-12">
+                <h1 class="text-h2 text-center font-weight-medium">
+                  백엔드 포지션을 꿈꾸는 개발자입니다.
+                </h1>
+              </v-col>
+
+              <v-col cols="12">
+                <p class="text-h5 text-center">
+                  안녕하세요! 백엔드 개발자를 꿈꾸는 정건준입니다.
+                </p>
+                <p class="text-h5 text-center">
+                  저는 책임감이 높은 개발자입니다. 항상 제가 맡은 일에 최선을 다하려 노력합니다.
+                </p>
+                <p class="text-h5 text-center">
+                  꾸준함을 좋아하기에 블로그 포스팅과 코딩을 매일 하려 노력합니다.
+                </p>
+                <p class="text-h5 text-center">
+                  부족함을 인정하기에 남에게 배우고 같이 성장하는 것을 좋아합니다.
+                </p>
+              </v-col>
+
+              <v-col cols="12" class="d-flex justify-center align-center" @click="click_butten">
+                <v-btn class="ma-2" color="primary">Next <v-icon>mdi-arrow-right-bold</v-icon></v-btn>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-main>
+      </v-app>
+    </div>
+  </body>
+</html>
+
+<style>
+  @font-face {
+    font-family: "SF_HambakSnow";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  * {
+    font-family: "SF_HambakSnow";
+  }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script>
+  new Vue({
+    el: "#app",
+    vuetify: new Vuetify(),
+    methods: {
+      click_butten: function () {
+        console.log("test");
+        var link = "next.html";
+        location.href = link;
+      },
+    },
+  });
+</script>
